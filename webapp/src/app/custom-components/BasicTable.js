@@ -23,15 +23,17 @@ function BasicTable({ header, data, dataProp, setSelected }) {
   );
 
   return (
-    <div className="card">
+    <div className="card w-100" >
       <div className="card-body">
         <h4 className="card-title">Liste des sons disponibles</h4>
-        <div className="table-responsive">
-          <Table hover>
+        <div className="table-responsive overflow-auto" style={{height : 300}}>
+          <Table hover >
             <thead>
               <tr>{head}</tr>
             </thead>
-            <tbody>{content}</tbody>
+            <tbody>            
+              {content}
+            </tbody>
           </Table>
         </div>
       </div>
